@@ -3,6 +3,7 @@ package com.cloud.backend.hhcf;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * 
@@ -12,6 +13,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * @author: zhaotf
  * @date: 2017年10月3日 上午9:18:11
  */
+@EnableEurekaClient
 @SpringBootApplication
 @EnableConfigServer
 public class ConfigServerApplication {

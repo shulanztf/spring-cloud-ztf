@@ -8,9 +8,9 @@
 	<packaging>pom</packaging>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.0.RELEASE</version>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-parent</artifactId>
+		<version>Brixton.SR4</version>
 		<relativePath />
 	</parent>
 
@@ -19,6 +19,8 @@
 		<module>spring-cloud-zuul</module>
 		<module>spring-cloud-config-server</module>
 		<module>spring-cloud-config-client</module>
+		<module>netflix-eureka-server</module>
+		<module>eureka-test-server</module>
 	</modules>
 
 </project>
