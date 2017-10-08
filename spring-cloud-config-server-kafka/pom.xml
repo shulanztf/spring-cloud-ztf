@@ -3,17 +3,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-
 	<parent>
 		<groupId>spring-cloud</groupId>
 		<artifactId>spring-cloud-ztf</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-
-	<groupId>spring-cloud-config-client</groupId>
-	<artifactId>spring-cloud-config-client</artifactId>
+	<groupId>spring-cloud-config-server-kafka</groupId>
+	<artifactId>spring-cloud-config-server-kafka</artifactId>
 	<packaging>war</packaging>
-	<name>spring-cloud-config-client Maven Webapp</name>
+	<name>spring-cloud-config-server-kafka Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -25,18 +23,13 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
@@ -44,17 +37,16 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bus-kafka</artifactId>
-		</dependencys>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-monitor</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
-		<finalName>spring-cloud-config-client</finalName>
+		<finalName>spring-cloud-config-server-kafka</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
