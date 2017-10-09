@@ -17,10 +17,10 @@
 		<module>spring-cloud-config</module>
 		<module>spring-cloud-zuul</module>
 		<module>spring-cloud-config-server</module>
-		<module>spring-cloud-config-client</module>
 		<module>netflix-eureka-server</module>
 		<module>eureka-test-server</module>
-    <module>spring-cloud-config-server-kafka</module>
+		<module>spring-cloud-config-server-kafka</module>
+    <module>spring-cloud-config-client</module>
   </modules>
 
 </project>
