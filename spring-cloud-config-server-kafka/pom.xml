@@ -43,6 +43,13 @@
 			<artifactId>spring-cloud-config-monitor</artifactId>
 		</dependency>
 
+		<!-- 辅助包 start -->
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpcore</artifactId>
+		</dependency>
+		<!-- 辅助包  end   -->
+
 	</dependencies>
 
 	<build>
