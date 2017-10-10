@@ -18,18 +18,24 @@ import org.springframework.web.client.RestTemplate;
  * @Version:1.0
  */
 @RestController
-@RequestMapping("/zipkinServer")
+@RequestMapping("/zipkinServer1")
 public class ZipkinServer1Controller {
 	private static Logger logger = Logger.getLogger(ZipkinServer1Controller.class);
 	@Resource
 	private RestTemplate restTemplate;
 
+	/**
+	 * @see http://localhost:8988/zipkinServer/hi.do
+	 */
 	@RequestMapping("/hi")
 	public String callHome() {
 		logger.log(Level.INFO, "calling trace service-hi  ");
-		return restTemplate.getForObject("http://localhost:8989/miya", String.class);
+		return restTemplate.getForObject("http://localhost:8989/zipkinServer2/miya.do", String.class);
 	}
 
+	/**
+	 * @see http://localhost:8988/zipkinServer/info.do
+	 */
 	@RequestMapping("/info")
 	public String info() {
 		logger.log(Level.INFO, "calling trace service-hi ");

@@ -20,19 +20,28 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @RequestMapping("/zipkinServer2")
 public class ZipkinServer2Controller {
-	private static Logger logger = Logger.getLogger(ZipkinServer2Controller.class);
+	private static Logger logger = Logger
+			.getLogger(ZipkinServer2Controller.class);
 	@Resource
 	private RestTemplate restTemplate;
 
+	/**
+	 * @see http://localhost:8989/zipkinServer2/hi.do
+	 */
 	@RequestMapping("/hi")
 	public String home() {
 		logger.log(Level.INFO, "hi is being called");
 		return "hi i'm miya!";
 	}
 
+	/**
+	 * @see http://localhost:8989/zipkinServer2/miya
+	 */
 	@RequestMapping("/miya")
 	public String info() {
 		logger.log(Level.INFO, "info is being called");
-		return restTemplate.getForObject("http://localhost:8988/info", String.class);
+		return restTemplate.getForObject("http://localhost:8988/zipkinServer1/info",
+				String.class);
 	}
+
 }
