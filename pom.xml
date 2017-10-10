@@ -21,6 +21,9 @@
 		<module>eureka-test-server</module>
 		<module>spring-cloud-config-server-kafka</module>
     <module>spring-cloud-config-client</module>
+    <module>spring-cloud-zipkin-server</module>
+    <module>spring-cloud-server1</module>
+    <module>spring-cloud-server2</module>
   </modules>
 
 </project>
