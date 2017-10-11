@@ -24,6 +24,7 @@
     <module>spring-cloud-zipkin-server</module>
     <module>spring-cloud-server1</module>
     <module>spring-cloud-server2</module>
+    <module>spring-cloud-consul-product1</module>
   </modules>
 
 </project>
